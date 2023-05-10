@@ -37,6 +37,11 @@ export class ApiServiceService {
     return this.http.get(this.api+`/getDataBasedOnTeam`,options);
   }
 
+  getTeamOwnerCaptain(teamName: string): Observable<any>{
+    const options = { params: { teamName: teamName } };
+    return this.http.get(this.api+`/getTeamOwnerCaptain`,options);
+  }
+  
   getPlayerTeam(): Observable<any>{
     return this.http.get(this.api+`/checkTeam`);
   }

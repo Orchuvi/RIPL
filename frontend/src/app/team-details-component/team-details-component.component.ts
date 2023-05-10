@@ -23,11 +23,15 @@ export class TeamDetailsComponentComponent implements OnInit{
   constructor(private route: ActivatedRoute,private service : ApiServiceService){}
 
   ngOnInit(): void {
+
     this.currentTeam = this.route.snapshot.paramMap.get('teamName')!;
+    this.service.getTeamOwnerCaptain(this.currentTeam).subscribe((res)=>{
+          this.captain =res[0]?res[0].teamCaptain :"captain";
+          this.owner = res[0] ?res[0].teamOwners:"owner"; 
+    })
     this.service.getDataBasedOnTeam(this.currentTeam).subscribe((res)=>{
       console.log(res);
-         this.captain =res[0]?res[0].teamCaptain :"captain";
-          this.owner = res[0] ?res[0].teamOwners:"owner"; 
+         
   
       if (Array.isArray(res)) {
        

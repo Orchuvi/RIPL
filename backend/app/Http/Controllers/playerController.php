@@ -21,6 +21,15 @@ class playerController extends Controller
 
     }
 
+    public function getTeamOwnerCap(Request $request){
+        $team=$request->input('teamName');
+
+        $players=DB::table('teamdetails')
+        ->select('teamOwners','teamCaptain')
+        ->where('teamName',$team)
+        ->get();
+        return response()->json($players);
+    }
     public function getDataBasedOnTeam(Request $request){
 
 

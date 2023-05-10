@@ -13,8 +13,7 @@ export class TeamSelectionComponentComponent {
   team: any = "SELECT A TEAM TO PICK A PLAYER";
   /*'Mighty Mavericks', 'Spartan Strikers', 'Uranus Hurricans', 'Mars Thunders', 'Mercury Steelers', 'Neptune Knights',
     'Venus Warriors', 'Vesta Avengers', 'Saturn Superstars', 'Pluto Panthers', 'Earth Heros', */
-  TotalTeams: any = ['Jupiter Eagles', 'Ceres Strikers', 'Uranus Hurricans', 'Mars Thunders', 'Mercury Steelers', 'Neptune Knights',
-  'Venus Warriors', 'Vesta Avengers', 'Saturn Superstars', 'Pluto Panthers', 'Earth Heros','Eris Falcons'];
+  TotalTeams: any = ['Vesta Avengers'];
   SelectedTeams: any = [];
   addStatus: boolean = false;
   deleteStatus: boolean = false;
@@ -78,7 +77,7 @@ export class TeamSelectionComponentComponent {
       console.log(this.currentTeam);
     });
 
-    this.timerSubscription = timer(1500).subscribe(() => {
+    this.timerSubscription = timer(4000).subscribe(() => {
       this.displayteamWinnerflag = true;
       this.addPlayerButtonDisabled = false;
       this.subscription.unsubscribe();
@@ -132,9 +131,12 @@ export class TeamSelectionComponentComponent {
       if (res.length == 0) this.arePlayersAvailable = true;
       else this.arePlayersAvailable = false;
       this.TeamDetails = res;
+      console.log(res);
+    })
+    this.service.getTeamOwnerCaptain(teamName).subscribe((res:any)=>{
+      console.log(res);
       this.Captain = res[0].teamCaptain
       this.Owners = res[0].teamOwners
-      console.log(res);
     })
   }
 
@@ -182,8 +184,8 @@ export class TeamSelectionComponentComponent {
       return;
     }
 
-    this.setSwitchOff();
-    this.adminAccess = false;
+    // this.setSwitchOff();
+    // this.adminAccess = false;
 
   }
 

@@ -137,7 +137,7 @@ export class PlayerSelectionComponentComponent implements OnInit {
         this.currentItem = this.currentPlayerDetails[this.currentIndex].name;
       });
 
-      this.timerSubscription = timer(1500).subscribe(() => {
+      this.timerSubscription = timer(4000).subscribe(() => {
         this.displayWinnerFlag = true;
         this.addPlayerButtonDisabled = false;
         this.subscription.unsubscribe();
