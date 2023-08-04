@@ -11,9 +11,8 @@ export class TeamSelectionComponentComponent {
   @Output() addedteamemit = new EventEmitter<string>();
   captain: any = "null";
   team: any = "SELECT A TEAM TO PICK A PLAYER";
-  /*'Mighty Mavericks', 'Spartan Strikers', 'Uranus Hurricans', 'Mars Thunders', 'Mercury Steelers', 'Neptune Knights',
-    'Venus Warriors', 'Vesta Avengers', 'Saturn Superstars', 'Pluto Panthers', 'Earth Heros', */
-  TotalTeams: any = ['Vesta Avengers'];
+  TotalTeams: any = ['Mighty Mavericks', 'Spartan Strikers', 'Uranus Hurricans', 'Mars Thunders', 'Mercury Steelers', 'Neptune Knights',
+  'Venus Warriors', 'Vesta Avengers', 'Saturn Superstars', 'Pluto Panthers', 'Earth Heros'];
   SelectedTeams: any = [];
   addStatus: boolean = false;
   deleteStatus: boolean = false;
