@@ -1023,6 +1023,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v9.52.6",
             "source": {
                 "type": "git",
@@ -1033,6 +1034,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/16454f17a2585c4589f721655fc5133270aadf8c",
                 "reference": "16454f17a2585c4589f721655fc5133270aadf8c",
+=======
+            "version": "v9.52.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "e14d28c0f9403630d13f308bb43f3d3cb73d6d67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/e14d28c0f9403630d13f308bb43f3d3cb73d6d67",
+                "reference": "e14d28c0f9403630d13f308bb43f3d3cb73d6d67",
+>>>>>>> c8419e7cb5debb3de6a1127a62e8ecbd9d2bf277
                 "shasum": ""
             },
             "require": {
@@ -1129,7 +1142,11 @@
                 "league/flysystem-read-only": "^3.3",
                 "league/flysystem-sftp-v3": "^3.0",
                 "mockery/mockery": "^1.5.1",
+<<<<<<< HEAD
                 "orchestra/testbench-core": "^7.24",
+=======
+                "orchestra/testbench-core": "^7.16",
+>>>>>>> c8419e7cb5debb3de6a1127a62e8ecbd9d2bf277
                 "pda/pheanstalk": "^4.0",
                 "phpstan/phpdoc-parser": "^1.15",
                 "phpstan/phpstan": "^1.4.7",
@@ -1217,7 +1234,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+<<<<<<< HEAD
             "time": "2023-04-18T13:44:55+00:00"
+=======
+            "time": "2023-03-28T18:03:54+00:00"
+>>>>>>> c8419e7cb5debb3de6a1127a62e8ecbd9d2bf277
         },
         {
             "name": "laravel/sanctum",

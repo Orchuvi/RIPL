@@ -30,13 +30,16 @@ export class TeamDetailsComponentComponent implements OnInit{
           this.owner = res[0] ?res[0].teamOwners:"owner"; 
     })
     this.service.getDataBasedOnTeam(this.currentTeam).subscribe((res)=>{
-      console.log(res);
-         
-  
-      if (Array.isArray(res)) {
+      console.log("from team details",res);
+      console.log("players",res.teamData[0].players);
+      this.captain =res.teamData[0].teamCaptain;
+      this.owner = res.teamData[0].teamOwners; 
+      
+      const players = res.teamData[0].players;
+      if (Array.isArray(players)) {
        
     
-        res.forEach((player) => {
+        players.forEach((player) => {
           if (player.skill === "Batting All-rounder" || player.skill === "Batting") {
             this.battingPlayers.push(player);
           } else if (player.skill === "Bowling All-rounder" || player.skill === "Bowling") {
